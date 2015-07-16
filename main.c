@@ -26,7 +26,9 @@ struct data_set_t{
     union CRC_packet_t CRC_value;
 };
 
+
 // Compute the MODBUS RTU CRC
+//Adopted from http://www.ccontrolsys.com/w/How_to_Compute_the_Modbus_RTU_Message_CRC 16.7.2015
 uint16_t ModRTU_CRC(uint8_t buf[], int len)
 {
   uint16_t crc = 0xFFFF;
