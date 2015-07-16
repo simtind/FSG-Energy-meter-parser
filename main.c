@@ -73,6 +73,8 @@ int main(int argc, char **argv)
     fgets(line, 80, fr);
     printf("%s", line);
 
+    fprintf(of, "Time[ms], Current[A], Voltage[V], Power[W]\n");
+
     while(fgets(line, 80, fr) != NULL){
         uint16_t CRC = 0;
         uint8_t data_array[8];
